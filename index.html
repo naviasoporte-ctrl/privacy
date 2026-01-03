@@ -14,6 +14,7 @@
     .muted{color:#6b7280}
     a{color:#2563eb}
     code{background:#f3f4f6;padding:2px 6px;border-radius:6px}
+    .pill{display:inline-block;background:#f3f4f6;border:1px solid rgba(0,0,0,.06);padding:6px 10px;border-radius:999px;font-size:12px;color:#374151}
   </style>
 </head>
 <body>
@@ -21,49 +22,106 @@
     <div class="card">
       <h1>Política de privacidad — NavIA</h1>
       <p class="muted">Última actualización: 03/01/2026</p>
-      <p class="muted">Contacto: <a href="mailto:navia.soporte@gmail.com">navia.soporte@gmail.com</a></p>
-      <p class="muted">Responsable: Desarrollador independiente de NavIA</p>
+      <p class="muted">Contacto (privacidad/soporte): <a href="mailto:navia.soporte@gmail.com">navia.soporte@gmail.com</a></p>
     </div>
 
     <div class="card">
       <h2>1) Qué es NavIA</h2>
-      <p>NavIA es una app de navegación/clima/mar que muestra pronóstico meteorológico, datos de mar (oleaje, mar de fondo, corrientes), mapas, y acceso a webcams de terceros.</p>
+      <p>
+        NavIA es una aplicación orientada a navegación y actividades en costa que muestra información meteorológica y marítima
+        (por ejemplo, viento, rachas, oleaje, mar de fondo, corrientes y temperatura del mar), mapas y acceso a webcams de terceros.
+      </p>
+      <p class="muted">
+        Importante: la información es orientativa y no sustituye fuentes oficiales ni el criterio del patrón.
+      </p>
     </div>
 
     <div class="card">
-      <h2>2) Datos que se tratan</h2>
+      <h2>2) Datos personales que se tratan</h2>
+      <p>Según el uso que hagas de la app y los permisos que concedas, se pueden tratar las siguientes categorías:</p>
       <ul>
-        <li><b>Cuenta (login)</b>: si creas una cuenta, se tratan datos de autenticación (por ejemplo email e identificador de usuario) gestionados con Supabase.</li>
-        <li><b>Preferencias</b>: ajustes de la app (por ejemplo unidades) y favoritos/ubicaciones guardadas asociados a tu cuenta.</li>
-        <li><b>Ubicación</b>: si concedes permiso, la app puede usar ubicación aproximada o precisa para centrar el mapa o consultar datos cercanos.</li>
-        <li><b>IA</b>: si usas la función de IA, se envía el texto que introduces (y contexto mínimo) a un proveedor de IA para generar la respuesta. NavIA no guarda un historial de chats.</li>
-        <li><b>Datos técnicos</b>: información mínima para funcionamiento y diagnóstico de errores.</li>
+        <li><b>Cuenta (login)</b>: si creas una cuenta, se tratan datos de autenticación como email e identificador de usuario.</li>
+        <li><b>Perfil</b>: nombre de usuario y, si los proporcionas, nombre y apellidos y teléfono; también ajustes como sistema de unidades, modo oscuro, notificaciones y auto‑ubicación.</li>
+        <li><b>Contenido guardado</b>: embarcaciones (datos básicos y características que añadas), preferencias de navegación y ubicaciones favoritas (incluyendo coordenadas).</li>
+        <li><b>Ubicación del dispositivo (primer plano)</b>: si autorizas el permiso, se usa ubicación aproximada o precisa para centrar el mapa o consultar previsión cercana.</li>
+        <li><b>Datos técnicos</b>: información mínima necesaria para funcionamiento y diagnóstico de errores (p. ej., fallos o incidencias técnicas).</li>
+        <li><b>Comunicaciones</b>: si contactas por email, se tratarán los datos que incluyas en el mensaje para poder responderte.</li>
       </ul>
     </div>
 
     <div class="card">
-      <h2>3) Servicios de terceros</h2>
+      <h2>3) Finalidades del tratamiento</h2>
       <ul>
-        <li><b>Supabase</b>: autenticación y datos de cuenta/favoritos.</li>
+        <li>Prestar el servicio y mostrar previsiones meteorológicas y marítimas.</li>
+        <li>Gestionar el acceso a tu cuenta y sincronizar tus datos (perfil, favoritos, preferencias, embarcaciones).</li>
+        <li>Mostrar información relacionada con la ubicación cuando lo solicitas (si has concedido permiso).</li>
+        <li>Atender solicitudes de soporte y mantener la seguridad y el correcto funcionamiento de la app.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>4) Base jurídica</h2>
+      <ul>
+        <li><b>Ejecución del servicio</b>: tratamientos necesarios para proporcionar funcionalidades de cuenta y sincronización.</li>
+        <li><b>Consentimiento</b>: permisos del dispositivo (por ejemplo, ubicación), que puedes revocar desde Ajustes del sistema.</li>
+        <li><b>Interés legítimo</b>: seguridad, prevención de abuso y diagnóstico técnico.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h2>5) Servicios de terceros</h2>
+      <p>La app utiliza proveedores externos para determinadas funciones:</p>
+      <ul>
+        <li><b>Supabase</b>: autenticación y almacenamiento/sincronización de datos de cuenta.</li>
         <li><b>Open‑Meteo (forecast)</b>: consultas a <code>api.open-meteo.com</code> con latitud/longitud para obtener pronóstico.</li>
-        <li><b>Open‑Meteo (marine)</b>: consultas a <code>marine-api.open-meteo.com</code> con latitud/longitud para obtener datos de mar.</li>
-        <li><b>Webcams</b>: enlaces y/o imágenes previas desde sitios de terceros (cada proveedor puede aplicar su propia política).</li>
-        <li><b>Proveedor de IA</b> (si está activado): procesa el texto para generar respuestas.</li>
+        <li><b>Open‑Meteo (marine)</b>: consultas a <code>marine-api.open-meteo.com</code> con latitud/longitud para obtener datos marítimos.</li>
+        <li><b>Webcams</b>: enlaces y/o previsualizaciones desde sitios de terceros; cada proveedor puede aplicar su propia política.</li>
+      </ul>
+      <p class="muted">
+        Estos servicios pueden recibir datos técnicos como dirección IP y el propio contenido de la petición (por ejemplo, coordenadas) por el funcionamiento normal de Internet.
+      </p>
+    </div>
+
+    <div class="card">
+      <h2>6) Conservación</h2>
+      <ul>
+        <li>Los datos asociados a tu cuenta se conservan mientras la cuenta permanezca activa o hasta que solicites su eliminación.</li>
+        <li>La ubicación se usa para la funcionalidad solicitada en el momento y no se trata como historial de rutas.</li>
+        <li>Los correos de soporte se conservan el tiempo necesario para atender tu solicitud y gestionar posibles responsabilidades.</li>
       </ul>
     </div>
 
     <div class="card">
-      <h2>4) Permisos y control</h2>
-      <p>Puedes retirar el permiso de ubicación en cualquier momento desde Ajustes del dispositivo. También puedes solicitar la eliminación de tu cuenta escribiendo a <a href="mailto:navia.soporte@gmail.com">navia.soporte@gmail.com</a>.</p>
+      <h2>7) Derechos y reclamaciones</h2>
+      <p>
+        Puedes ejercer los derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad,
+        escribiendo a <a href="mailto:navia.soporte@gmail.com">navia.soporte@gmail.com</a> desde el correo asociado a tu cuenta e indicando “Privacidad” en el asunto.
+      </p>
+      <p class="muted">
+        Si consideras que el tratamiento no se ajusta a la normativa, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD).
+      </p>
+      <p class="muted">
+        Información sobre el ejercicio de derechos: <a href="https://www.aepd.es/derechos-y-deberes/ejerce-tus-derechos" target="_blank" rel="noopener">aepd.es</a>
+      </p>
     </div>
 
     <div class="card">
-      <h2>5) Cambios</h2>
-      <p>Esta política puede actualizarse si cambian funciones, proveedores o requisitos legales. Se publicará la nueva fecha de actualización en esta página.</p>
+      <h2>8) Eliminación de cuenta</h2>
+      <p>
+        Puedes solicitar la eliminación de tu cuenta escribiendo a <a href="mailto:navia.soporte@gmail.com">navia.soporte@gmail.com</a>.
+        Para evitar eliminaciones no autorizadas, puede ser necesario verificar que eres titular de la cuenta.
+      </p>
     </div>
 
     <div class="card">
-      <p class="muted">URL sugerida para App Store/Google Play: <code>https://naviasoporte.github.io/</code></p>
+      <h2>9) Cambios en esta política</h2>
+      <p>
+        Esta política puede actualizarse si cambian funciones, proveedores o requisitos legales. Se publicará la nueva fecha de actualización en esta página.
+      </p>
+    </div>
+
+    <div class="card">
+      <p class="muted">URL para App Store/Google Play (GitHub Pages): <code>https://TU_USUARIO.github.io/TU_REPO/</code> o <code>https://TU_USUARIO.github.io/</code> (ver explicación abajo).</p>
     </div>
   </div>
 </body>
