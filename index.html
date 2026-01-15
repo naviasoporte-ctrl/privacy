@@ -4,131 +4,406 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Política de privacidad - NavIA</title>
+
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#f6f7f9;color:#111827;margin:0}
-    .wrap{max-width:900px;margin:0 auto;padding:24px}
-    .card{background:#fff;border:1px solid rgba(0,0,0,.08);border-radius:14px;padding:18px;margin:14px 0}
-    h1{margin:0 0 10px;font-size:22px}
-    h2{margin:18px 0 8px;font-size:15px}
-    p,li{font-size:14px;line-height:1.5;color:#374151}
-    .muted{color:#6b7280}
-    a{color:#2563eb}
-    code{background:#f3f4f6;padding:2px 6px;border-radius:6px}
-    .pill{display:inline-block;background:#f3f4f6;border:1px solid rgba(0,0,0,.06);padding:6px 10px;border-radius:999px;font-size:12px;color:#374151}
+    :root{
+      --bg:#ffffff;
+      --text:#0b1b2b;
+      --muted:#47647a;
+      --line:#e7eef6;
+      --blue:#1677ff;
+      --blue2:#15b8d6;
+      --card:#ffffff;
+      --shadow: 0 18px 45px rgba(10, 30, 50, .10);
+      --radius:18px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: var(--bg);
+      color: var(--text);
+    }
+    a{color:inherit}
+
+    .container{
+      width:min(var(--max), calc(100% - 40px));
+      margin:0 auto;
+    }
+
+    header{
+      position:sticky; top:0; z-index:20;
+      background: rgba(255,255,255,.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0; gap:16px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800;
+      text-decoration:none;
+    }
+    .brand img{
+      width:34px; height:34px; border-radius:10px;
+      box-shadow: 0 10px 22px rgba(0,0,0,.10);
+    }
+    .navlinks{
+      display:flex; gap:16px; color:var(--muted);
+      font-weight:700; font-size:.95rem;
+    }
+    .navlinks a{text-decoration:none}
+    .navlinks a:hover{color: var(--text);}
+
+    main{
+      padding:32px 0 40px;
+    }
+
+    h1{
+      font-size: clamp(1.8rem, 2.6vw, 2.2rem);
+      line-height:1.15;
+      margin:0 0 10px;
+      letter-spacing:-.3px;
+    }
+    h2{
+      font-size:1rem;
+      margin:0 0 10px;
+      letter-spacing:-.1px;
+    }
+
+    .pill{
+      display:inline-flex; gap:8px; align-items:center;
+      border:1px solid var(--line);
+      background: linear-gradient(90deg, rgba(22,119,255,.08), rgba(21,184,214,.06));
+      padding:6px 10px; border-radius:999px;
+      color: var(--muted); font-weight:800; font-size:.82rem;
+    }
+
+    .muted{color:var(--muted);}
+
+    .cards{
+      display:flex;
+      flex-direction:column;
+      gap:14px;
+      margin-top:18px;
+    }
+    .card{
+      border:1px solid var(--line);
+      background: var(--card);
+      border-radius: var(--radius);
+      padding:16px 18px;
+      box-shadow: 0 10px 22px rgba(10,30,50,.06);
+    }
+
+    p, li{
+      font-size:.93rem;
+      line-height:1.6;
+      color:#374151;
+      margin:0 0 8px;
+    }
+    ul{padding-left:1.1rem; margin:0 0 4px;}
+    li{margin-bottom:6px;}
+
+    code{
+      background:#f3f4f6;
+      padding:2px 6px;
+      border-radius:6px;
+      font-size:.8rem;
+    }
+
+    footer{
+      border-top: 1px solid var(--line);
+      background:#fff;
+      padding: 26px 0 34px;
+      color: var(--muted);
+    }
+    .footerGrid{
+      display: grid;
+      grid-template-columns: repeat(4, max-content);
+      justify-content: center;
+      column-gap: 48px;
+      row-gap: 18px;
+      padding-top: 10px;
+    }
+    .fTitle{
+      color: var(--text);
+      font-weight:900;
+      margin:0 0 10px;
+      font-size:.95rem;
+    }
+    .fLink{
+      display:block;
+      text-decoration:none;
+      color: var(--muted);
+      padding:6px 0;
+      font-weight:700;
+      font-size:.9rem;
+    }
+    .fLink:hover{color: var(--text);}
+    .footBottom{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding-top: 18px;
+      margin-top: 18px;
+      border-top:1px solid var(--line);
+      font-size:.9rem;
+      text-align:center;
+    }
+
+    @media (max-width: 980px){
+      .navlinks{display:none;}
+      main{padding-top:24px;}
+    }
   </style>
 </head>
 
 <body>
-  <div class="wrap">
-    <div class="card">
-      <h1>Política de privacidad — NavIA</h1>
-      <p class="muted"><span class="pill">Última actualización</span> 04/01/2026</p>
-      <p class="muted"><span class="pill">Responsable</span> MowyLibra</p>
-      <p class="muted"><span class="pill">Contacto (privacidad/soporte)</span>
-        <a href="mailto:navia.soporte@gmail.com">navia.soporte@gmail.com</a>
-      </p>
+  <header>
+    <div class="container nav">
+      <a class="brand" href="https://naviasoporte-ctrl.github.io/web/#top">
+        <img src="./icon.png" alt="NavIA logo">
+        <span>NavIA</span>
+      </a>
+      <nav class="navlinks">
+        <a href="https://naviasoporte-ctrl.github.io/web/#funciones">Funciones</a>
+        <a href="https://naviasoporte-ctrl.github.io/web/#capturas">Capturas</a>
+        <a href="https://naviasoporte-ctrl.github.io/web/#descarga">Descarga</a>
+        <a href="https://naviasoporte-ctrl.github.io/web/#soporte">Soporte</a>
+      </nav>
     </div>
+  </header>
 
-    <div class="card">
-      <h2>1) Identificación y alcance</h2>
-      <p>
-        Esta Política de Privacidad explica cómo se tratan los datos personales cuando utilizas NavIA (en adelante, la “App”).
-        Se aplica al uso de la App en iOS y Android, así como a las comunicaciones relacionadas con soporte y privacidad.
-      </p>
-    </div>
+  <main>
+    <div class="container">
+      <!-- Cabecera de la política -->
+      <div class="card" style="margin-bottom:10px;">
+        <span class="pill">Política de privacidad</span>
+        <h1>NavIA — Tratamiento de datos personales</h1>
+        <p class="muted">
+          Esta página resume cómo se tratan tus datos personales cuando utilizas NavIA en iOS y Android.
+        </p>
+        <p class="muted">
+          <span class="pill">Última actualización</span>&nbsp;04/01/2026
+        </p>
+        <p class="muted">
+          <span class="pill">Responsable</span>&nbsp;MowyLibra
+        </p>
+        <p class="muted">
+          <span class="pill">Contacto (privacidad/soporte)</span>&nbsp;
+          <a href="mailto:navia.soporte@gmail.com">navia.soporte@gmail.com</a>
+        </p>
+      </div>
 
-    <div class="card">
-      <h2>2) Qué es NavIA</h2>
-      <p>
-        NavIA es una aplicación orientada a navegación y actividades en la costa que muestra información meteorológica y marítima
-        (por ejemplo, viento, rachas, oleaje, mar de fondo, corrientes y temperatura del mar), y puede incluir mapas y acceso a webcams de terceros.
-      </p>
-      <p class="muted">
-        Importante: la información mostrada es orientativa y no sustituye fuentes oficiales ni el criterio del patrón.
-      </p>
-    </div>
+      <!-- Bloques de la política -->
+      <div class="cards">
+        <section class="card">
+          <h2>1) Identificación y alcance</h2>
+          <p>
+            Esta Política de Privacidad explica cómo se tratan los datos personales cuando utilizas NavIA (en adelante, la “App”).
+            Se aplica al uso de la App en iOS y Android, así como a las comunicaciones relacionadas con soporte y privacidad.
+          </p>
+        </section>
 
-    <div class="card">
-      <h2>3) Datos personales que se pueden tratar</h2>
-      <p>Según el uso que hagas de la App y los permisos que concedas, se pueden tratar las siguientes categorías:</p>
-      <ul>
-        <li><b>Cuenta</b>: si creas una cuenta, se tratan datos de autenticación como el correo electrónico y un identificador de usuario, así como información necesaria para gestionar la sesión.</li>
-        <li><b>Perfil y preferencias</b>: ajustes de la App (por ejemplo, sistema de unidades y modo oscuro) y otros datos que el usuario decida facilitar.</li>
-        <li><b>Contenido guardado por el usuario</b>: por ejemplo, ubicaciones favoritas y datos asociados (incluidas coordenadas), y otros elementos que la App permita guardar (p. ej., embarcaciones o preferencias de navegación, si están disponibles).</li>
-        <li><b>Ubicación del dispositivo (primer plano)</b>: si autorizas el permiso, se usa ubicación aproximada o precisa para centrar el mapa o consultar previsión cercana.</li>
-        <li><b>Datos técnicos mínimos</b>: información necesaria para el funcionamiento, seguridad y diagnóstico de errores (p. ej., incidencias técnicas).</li>
-        <li><b>Comunicaciones</b>: si contactas por email, se tratarán los datos que incluyas en el mensaje para poder responderte.</li>
-      </ul>
-    </div>
+        <section class="card">
+          <h2>2) Qué es NavIA</h2>
+          <p>
+            NavIA es una aplicación orientada a navegación y actividades en la costa que muestra información meteorológica, marítima y de calidad del aire
+            (por ejemplo, viento, rachas, oleaje, mar de fondo, corrientes, temperatura del mar e índices de calidad del aire), y puede incluir mapas y acceso a webcams de terceros.
+          </p>
+          <p>
+            La App también puede mostrar indicadores adicionales (como presión atmosférica, humedad, radiación o calidad del aire) y pequeños textos informativos y datos curiosos
+            sobre el tiempo y la zona, incluyendo información general sobre confort y salud.
+          </p>
+          <p class="muted">
+            Importante: la información mostrada es orientativa y no sustituye fuentes oficiales, el criterio del patrón ni el consejo de profesionales sanitarios.
+          </p>
+        </section>
 
-    <div class="card">
-      <h2>4) Finalidades del tratamiento</h2>
-      <ul>
-        <li>Prestar el servicio y mostrar previsiones meteorológicas y marítimas.</li>
-        <li>Gestionar el acceso a la cuenta, cuando corresponda, y sincronizar datos guardados (por ejemplo, preferencias y favoritos).</li>
-        <li>Mostrar información relacionada con la ubicación cuando el usuario lo solicita y ha concedido el permiso.</li>
-        <li>Atender solicitudes de soporte y mantener la seguridad y el correcto funcionamiento de la App.</li>
-      </ul>
-    </div>
+        <section class="card">
+          <h2>3) Datos personales que se pueden tratar</h2>
+          <p>Según el uso que hagas de la App y los permisos que concedas, se pueden tratar las siguientes categorías:</p>
+          <ul>
+            <li>
+              <b>Cuenta</b>: si creas una cuenta, se tratan datos de autenticación como el correo electrónico y un identificador de usuario, así como información necesaria para gestionar la sesión
+              (por ejemplo, inicio de sesión, recuperación de contraseña y validación básica de seguridad).
+            </li>
+            <li>
+              <b>Perfil y preferencias</b>: ajustes de la App (por ejemplo, sistema de unidades, formato de latitud/longitud, modo oscuro y otras preferencias de uso) y otros datos que el usuario decida facilitar en su perfil.
+            </li>
+            <li>
+              <b>Contenido guardado por el usuario</b>: por ejemplo, ubicaciones favoritas y datos asociados (incluidas coordenadas), y otros elementos que la App permita guardar
+              (p. ej., embarcaciones o preferencias de navegación, si están disponibles).
+            </li>
+            <li>
+              <b>Ubicación del dispositivo (primer plano)</b>: si autorizas el permiso, se usa ubicación aproximada o precisa para centrar el mapa, consultar previsiones cercanas y obtener datos asociados como calidad del aire en la zona.
+            </li>
+            <li>
+              <b>Valoraciones y comentarios sobre la App</b>: si envías una valoración o comentario desde una cuenta iniciada sesión, se asocia la puntuación y el texto a tu identificador de usuario.
+            </li>
+            <li>
+              <b>Datos técnicos mínimos</b>: información necesaria para el funcionamiento, seguridad y diagnóstico de errores (p. ej., registros de fallos, información básica del dispositivo y versión de la App).
+            </li>
+            <li>
+              <b>Comunicaciones</b>: si contactas por email, se tratarán los datos que incluyas en el mensaje para poder responderte (por ejemplo, dirección de correo y contenido de la consulta).
+            </li>
+          </ul>
+        </section>
 
-    <div class="card">
-      <h2>5) Base jurídica</h2>
-      <ul>
-        <li><b>Ejecución del servicio</b>: tratamientos necesarios para proporcionar las funcionalidades solicitadas por el usuario.</li>
-        <li><b>Consentimiento</b>: permisos del dispositivo (por ejemplo, ubicación), que puedes revocar desde Ajustes del sistema.</li>
-        <li><b>Interés legítimo</b>: seguridad, prevención de abuso y diagnóstico técnico.</li>
-      </ul>
-    </div>
+        <section class="card">
+          <h2>4) Finalidades del tratamiento</h2>
+          <ul>
+            <li>Prestar el servicio y mostrar previsiones meteorológicas, marítimas y de calidad del aire.</li>
+            <li>
+              Mostrar indicadores complementarios (por ejemplo, presión atmosférica, humedad, radiación o calidad del aire) y textos informativos relacionados con el confort y la salud de forma general,
+              sin que ello constituya consejo médico individualizado.
+            </li>
+            <li>
+              Gestionar el acceso a la cuenta, cuando corresponda, incluidas funciones como inicio de sesión, recuperación de contraseña y sincronización de datos.
+            </li>
+            <li>
+              Sincronizar y mantener datos guardados (por ejemplo, preferencias, formato de unidades y coordenadas, y ubicaciones favoritas) cuando tengas una cuenta.
+            </li>
+            <li>
+              Mostrar información relacionada con la ubicación cuando el usuario lo solicita y ha concedido el permiso (por ejemplo, previsiones cercanas o calidad del aire en la zona).
+            </li>
+            <li>
+              Permitir que el usuario envíe valoraciones y comentarios sobre la App cuando está autenticado, y analizar de forma agregada esa información para mejorar el servicio.
+            </li>
+            <li>Atender solicitudes de soporte, responder consultas y mantener la seguridad y el correcto funcionamiento de la App.</li>
+          </ul>
+        </section>
 
-    <div class="card">
-      <h2>6) Servicios de terceros</h2>
-      <p>
-        La App utiliza proveedores externos para determinadas funciones. Estos servicios pueden recibir datos técnicos (por ejemplo, dirección IP)
-        y, cuando aplique, el contenido de la petición necesaria para responder (por ejemplo, coordenadas), por el funcionamiento normal de Internet.
-      </p>
-      <ul>
-        <li><b>Supabase</b>: autenticación y almacenamiento/sincronización de datos asociados a la cuenta.</li>
-        <li><b>Open‑Meteo (forecast)</b>: consultas a <code>api.open-meteo.com</code> con latitud/longitud para obtener pronóstico.</li>
-        <li><b>Open‑Meteo (marine)</b>: consultas a <code>marine-api.open-meteo.com</code> con latitud/longitud para obtener datos marítimos.</li>
-        <li><b>Webcams</b>: al pulsar una webcam se abre el sitio del proveedor en el navegador del dispositivo; al acceder se aplican sus propios términos y política de privacidad (pueden tratar datos técnicos como la IP por el funcionamiento normal de Internet).</li>
-      </ul>
-    </div>
+        <section class="card">
+          <h2>5) Base jurídica</h2>
+          <ul>
+            <li>
+              <b>Ejecución del servicio</b>: tratamientos necesarios para proporcionar las funcionalidades solicitadas por el usuario
+              (por ejemplo, mostrar previsiones, guardar favoritos, gestionar la cuenta o enviar valoraciones).
+            </li>
+            <li>
+              <b>Consentimiento</b>: permisos del dispositivo (por ejemplo, ubicación), que puedes otorgar o revocar desde Ajustes del sistema operativo.
+            </li>
+            <li>
+              <b>Interés legítimo</b>: seguridad, prevención de abuso, mejora de la App y diagnóstico técnico, siempre ponderando estos intereses frente a tus derechos y expectativas.
+            </li>
+          </ul>
+        </section>
 
-    <div class="card">
-      <h2>7) Conservación</h2>
-      <ul>
-        <li>Los datos asociados a tu cuenta se conservan mientras la cuenta permanezca activa o hasta que solicites su eliminación.</li>
-        <li>La ubicación se usa para la funcionalidad solicitada en el momento y no se trata como historial de rutas.</li>
-        <li>Los correos de soporte se conservan el tiempo necesario para atender tu solicitud y gestionar posibles responsabilidades.</li>
-      </ul>
-    </div>
+        <section class="card">
+          <h2>6) Servicios de terceros</h2>
+          <p>
+            La App utiliza proveedores externos para determinadas funciones. Estos servicios pueden recibir datos técnicos (por ejemplo, dirección IP)
+            y, cuando aplique, el contenido de la petición necesaria para responder (por ejemplo, coordenadas), por el funcionamiento normal de Internet.
+          </p>
+          <ul>
+            <li>
+              <b>Supabase</b>: autenticación y almacenamiento/sincronización de datos asociados a la cuenta (por ejemplo, perfil, preferencias, favoritos y valoraciones).
+            </li>
+            <li>
+              <b>Open‑Meteo (forecast)</b>: consultas a <code>api.open-meteo.com</code> con latitud/longitud para obtener pronóstico meteorológico.
+            </li>
+            <li>
+              <b>Open‑Meteo (marine)</b>: consultas a <code>marine-api.open-meteo.com</code> con latitud/longitud para obtener datos marítimos.
+            </li>
+            <li>
+              <b>Open‑Meteo (air quality)</b>: consultas a <code>air-quality-api.open-meteo.com</code> con latitud/longitud para obtener índices de calidad del aire y contaminantes asociados.
+            </li>
+            <li>
+              <b>Búsqueda de ubicaciones</b> (por ejemplo, Nominatim/OpenStreetMap): servicios que permiten buscar localidades o puntos de interés a partir de un texto o coordenadas.
+            </li>
+            <li>
+              <b>Mapas</b> (por ejemplo, ArcGIS u otros proveedores cartográficos): servicios que muestran mapas y capas geográficas en la App.
+            </li>
+            <li>
+              <b>Webcams</b>: al pulsar una webcam se abre el sitio del proveedor en el navegador del dispositivo; al acceder se aplican sus propios términos y política de privacidad
+              (pueden tratar datos técnicos como la IP por el funcionamiento normal de Internet).
+            </li>
+          </ul>
+        </section>
 
-    <div class="card">
-      <h2>8) Derechos y reclamaciones</h2>
-      <p>
-        Puedes ejercer los derechos que correspondan (por ejemplo, acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, cuando apliquen),
-        escribiendo a <a href="mailto:navia.soporte@gmail.com">navia.soporte@gmail.com</a> desde el correo asociado a tu cuenta e indicando “Privacidad” en el asunto.
-      </p>
-      <p class="muted">
-        Información sobre el ejercicio de derechos: <a href="https://www.aepd.es/derechos-y-deberes/ejerce-tus-derechos" target="_blank" rel="noopener">aepd.es</a>
-      </p>
-    </div>
+        <section class="card">
+          <h2>7) Conservación</h2>
+          <ul>
+            <li>Los datos asociados a tu cuenta se conservan mientras la cuenta permanezca activa o hasta que solicites su eliminación.</li>
+            <li>
+              La ubicación se usa para la funcionalidad solicitada en el momento (por ejemplo, consultar previsiones o calidad del aire cercanas) y no se trata como un historial de rutas continuas.
+            </li>
+            <li>
+              Las valoraciones y comentarios asociados a tu cuenta se conservan mientras mantengas la cuenta o hasta que los elimines o solicites su supresión, en la medida en que sea técnicamente posible.
+            </li>
+            <li>Los correos de soporte se conservan el tiempo necesario para atender tu solicitud y gestionar posibles responsabilidades.</li>
+          </ul>
+        </section>
 
-    <div class="card">
-      <h2>9) Eliminación de cuenta</h2>
-      <p>
-        Puedes eliminar tu cuenta y los datos asociados directamente desde la propia App, usando la opción “Eliminar cuenta” disponible en tu perfil.
-        Si no pudieras acceder a la App o encuentras problemas al hacerlo, puedes escribir a
-        <a href="mailto:navia.soporte@gmail.com">navia.soporte@gmail.com</a> para solicitar ayuda.
-      </p>
-    </div>
+        <section class="card">
+          <h2>8) Derechos y reclamaciones</h2>
+          <p>
+            Puedes ejercer los derechos que correspondan (por ejemplo, acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad, cuando apliquen),
+            escribiendo a <a href="mailto:navia.soporte@gmail.com">navia.soporte@gmail.com</a> desde el correo asociado a tu cuenta e indicando “Privacidad” en el asunto.
+          </p>
+          <p class="muted">
+            Información sobre el ejercicio de derechos:
+            <a href="https://www.aepd.es/derechos-y-deberes/ejerce-tus-derechos" target="_blank" rel="noopener">aepd.es</a>
+          </p>
+        </section>
 
-    <div class="card">
-      <h2>10) Cambios en esta política</h2>
-      <p>
-        Esta política puede actualizarse si cambian funciones, proveedores o requisitos legales. Se publicará la nueva fecha de actualización en esta página.
-      </p>
+        <section class="card">
+          <h2>9) Eliminación de cuenta</h2>
+          <p>
+            Puedes eliminar tu cuenta y los datos asociados directamente desde la propia App, usando la opción “Eliminar cuenta” disponible en tu perfil.
+            Si no pudieras acceder a la App o encuentras problemas al hacerlo, puedes escribir a
+            <a href="mailto:navia.soporte@gmail.com">navia.soporte@gmail.com</a> para solicitar ayuda.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>10) Cambios en esta política</h2>
+          <p>
+            Esta política puede actualizarse si cambian funciones, proveedores o requisitos legales. Se publicará la nueva fecha de actualización en esta página.
+          </p>
+        </section>
+      </div>
     </div>
-  </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footerGrid">
+        <div>
+          <p class="fTitle">NavIA</p>
+          <a class="fLink" href="https://naviasoporte-ctrl.github.io/web/#funciones">Funciones</a>
+          <a class="fLink" href="https://naviasoporte-ctrl.github.io/web/#capturas">Capturas</a>
+          <a class="fLink" href="https://naviasoporte-ctrl.github.io/web/#descarga">Descarga</a>
+        </div>
+
+        <div>
+          <p class="fTitle">Legal</p>
+          <a class="fLink" href="https://naviasoporte-ctrl.github.io/privacy/" target="_blank" rel="noopener">Privacidad</a>
+        </div>
+
+        <div>
+          <p class="fTitle">Ayuda</p>
+          <a class="fLink" href="https://naviasoporte-ctrl.github.io/support/" target="_blank" rel="noopener">Soporte</a>
+        </div>
+
+        <div>
+          <p class="fTitle">Contacto</p>
+          <a class="fLink" href="mailto:navia.soporte@gmail.com">Email</a>
+        </div>
+      </div>
+
+      <div class="footBottom">
+        <span>© <span id="y"></span> NavIA. Todos los derechos reservados.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
